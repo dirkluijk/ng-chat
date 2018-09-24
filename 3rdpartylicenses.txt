@@ -374,31 +374,19 @@ THE SOFTWARE.
 MIT
 MIT
 
-@firebase/app@0.3.4
-Apache-2.0
-Apache-2.0
-
-@firebase/util@0.2.2
-Apache-2.0
-Apache-2.0
-
-@firebase/firestore@0.8.1
-Apache-2.0
-Apache-2.0
-
-@firebase/logger@0.1.1
-Apache-2.0
-Apache-2.0
-
-@firebase/webchannel-wrapper@0.2.9
-Apache-2.0
-Apache-2.0
-
 firebase@5.5.1
 Apache-2.0
 Apache-2.0
 
 @firebase/polyfill@0.3.3
+Apache-2.0
+Apache-2.0
+
+@firebase/app@0.3.4
+Apache-2.0
+Apache-2.0
+
+@firebase/util@0.2.2
 Apache-2.0
 Apache-2.0
 
@@ -424,6 +412,18 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+@firebase/firestore@0.8.1
+Apache-2.0
+Apache-2.0
+
+@firebase/logger@0.1.1
+Apache-2.0
+Apache-2.0
+
+@firebase/webchannel-wrapper@0.2.9
+Apache-2.0
+Apache-2.0
 
 @angular/fire@5.0.2
 MIT
