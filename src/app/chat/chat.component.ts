@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { User, UserInfo } from 'firebase';
+import { User, UserInfo } from 'firebase/auth';
 import { Observable } from 'rxjs';
 import { first } from 'rxjs/operators';
 

@@ -1,4 +1,4 @@
-import { UserInfo } from 'firebase';
+import { UserInfo } from 'firebase/auth';
 
 export interface Message {
   user: UserInfo;
