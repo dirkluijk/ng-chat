@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  height: 100vh;
+  background: #eeeeee;
+  flex-direction: column;
+}
+
+mat-toolbar {
+  display: flex;
+  z-index: 2;
+
+  button {
+    margin-left: auto;
+  }
+}

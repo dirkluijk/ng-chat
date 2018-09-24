@@ -1,0 +1,23 @@
+<div class="container" #scrollContainer>
+  <mat-card class="message" *ngFor="let message of messages$ | async" [class.from-me]="message.user.uid === user.uid">
+    <mat-card-header>
+      <img mat-card-avatar [src]="message.user.photoURL">
+      <mat-card-title>{{ message.user.displayName }}</mat-card-title>
+      <mat-card-subtitle class="time">{{ message.datePosted | date: 'shortTime' }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div>{{ message.body }}</div>
+      <div class="time time-small">{{ message.datePosted | date: 'shortTime' }}</div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<footer>
+  <mat-card>
+    <mat-form-field [floatLabel]="'never'" appearance="standard">
+      <textarea matInput matTextareaAutosize placeholder="Send message..." [(ngModel)]="newMessageBody"
+                (keydown.enter)="send($event)"></textarea>
+      <mat-icon matSuffix color="primary">send</mat-icon>
+    </mat-form-field>
+  </mat-card>
+</footer>
