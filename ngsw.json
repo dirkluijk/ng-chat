@@ -9,12 +9,12 @@
       "urls": [
         "https://dirkluijk.github.io/ng-chat/0.ea62deb65874aea2d895.js",
         "https://dirkluijk.github.io/ng-chat/1.328bfe76d39d76131160.js",
-        "https://dirkluijk.github.io/ng-chat/2.db092ab9ba73fdedf7f5.js",
+        "https://dirkluijk.github.io/ng-chat/2.0ccb668e64c68d96486a.js",
         "https://dirkluijk.github.io/ng-chat/favicon.ico",
         "https://dirkluijk.github.io/ng-chat/index.html",
         "https://dirkluijk.github.io/ng-chat/main.d4c185a45f40cd1780e4.js",
         "https://dirkluijk.github.io/ng-chat/polyfills.1f682948bdc523f3cb0b.js",
-        "https://dirkluijk.github.io/ng-chat/runtime.c9171f78b350904bbe58.js",
+        "https://dirkluijk.github.io/ng-chat/runtime.51af9df5f20a547844a0.js",
         "https://dirkluijk.github.io/ng-chat/styles.5c186692fbd1e32741aa.css"
       ],
       "patterns": []
@@ -43,7 +43,7 @@
   "hashTable": {
     "https://dirkluijk.github.io/ng-chat/0.ea62deb65874aea2d895.js": "d0b9e2b17d0f4ba96e15f94de9d3152a7b3f0c4b",
     "https://dirkluijk.github.io/ng-chat/1.328bfe76d39d76131160.js": "9dfc914565c7150c04a010a5eb15edb0449785d1",
-    "https://dirkluijk.github.io/ng-chat/2.db092ab9ba73fdedf7f5.js": "01fdac2d5788bee282ad4d1c6e92fe17bbc9725a",
+    "https://dirkluijk.github.io/ng-chat/2.0ccb668e64c68d96486a.js": "58d16867cf9ef173b860facaa217c1a6a2251bc7",
     "https://dirkluijk.github.io/ng-chat/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "https://dirkluijk.github.io/ng-chat/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "https://dirkluijk.github.io/ng-chat/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -53,10 +53,10 @@
     "https://dirkluijk.github.io/ng-chat/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://dirkluijk.github.io/ng-chat/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://dirkluijk.github.io/ng-chat/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://dirkluijk.github.io/ng-chat/index.html": "3466e5391c74126a4b5060a677d913f76fe7116d",
+    "https://dirkluijk.github.io/ng-chat/index.html": "fd7e5e52efd7ead6997a557477fcdb562c464168",
     "https://dirkluijk.github.io/ng-chat/main.d4c185a45f40cd1780e4.js": "cac8b2c716dd516c02dfabc7bd626814e2d58c16",
     "https://dirkluijk.github.io/ng-chat/polyfills.1f682948bdc523f3cb0b.js": "22f5c7d2a7ba8b39450284707ae4811616cdd3ad",
-    "https://dirkluijk.github.io/ng-chat/runtime.c9171f78b350904bbe58.js": "cfb0bc332eb3486d35e25adc4e105527f70e1eb4",
+    "https://dirkluijk.github.io/ng-chat/runtime.51af9df5f20a547844a0.js": "dbe80c96ae447e07775280d9af22efdafa399fac",
     "https://dirkluijk.github.io/ng-chat/styles.5c186692fbd1e32741aa.css": "b398b27032499e7d261c9be31c48bc13b6f905dc"
   },
   "navigationUrls": [
