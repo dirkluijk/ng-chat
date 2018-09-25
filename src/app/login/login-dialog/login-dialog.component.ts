@@ -25,7 +25,7 @@ export class LoginDialogComponent {
   }
 
   private doLogin(provider: firebase.auth.AuthProvider) {
-    this.afAuth.auth.signInWithPopup(provider).then(() => {
+    this.afAuth.auth.signInWithRedirect(provider).then(() => {
       this.dialogRef.close();
     });
   }
