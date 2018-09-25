@@ -3,6 +3,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MatButtonModule, MatIconModule, MatMenuModule, MatToolbarModule } from '@angular/material';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -30,6 +31,7 @@ const routes: Routes = [
     AppComponent,
   ],
   imports: [
+    BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
