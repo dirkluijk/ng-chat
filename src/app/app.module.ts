@@ -11,12 +11,11 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { AuthGuardService } from './auth-guard.service';
-import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent,
+    loadChildren: 'src/app/login/login.module#LoginModule',
   },
   {
     path: '',
@@ -28,7 +27,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
-import * as firebase from 'firebase/app';
+
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +10,14 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private afAuth: AngularFireAuth, private router: Router) {}
+  constructor(public dialog: MatDialog, private router: Router) {}
 
-  login() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(() => {
+  openLoginDialog() {
+    const dialogRef = this.dialog.open(LoginDialogComponent, {
+      width: '200px'
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
       this.router.navigate(['/']);
     });
   }

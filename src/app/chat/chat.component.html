@@ -1,15 +1,18 @@
-<div class="container" #scrollContainer>
-  <mat-card class="message" *ngFor="let message of messages$ | async" [class.from-me]="message.user.uid === user.uid">
-    <mat-card-header>
-      <img mat-card-avatar [src]="message.user.photoURL">
-      <mat-card-title>{{ message.user.displayName }}</mat-card-title>
-      <mat-card-subtitle class="time">{{ message.datePosted | date: 'shortTime' }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <div>{{ message.body }}</div>
-      <div class="time time-small">{{ message.datePosted | date: 'shortTime' }}</div>
-    </mat-card-content>
-  </mat-card>
+<div class="container">
+  <div class="messages" *ngIf="messages$ | async as messages" [@listStagger]="messages.length">
+      <mat-card class="message" *ngFor="let message of messages; trackBy: trackById; index as i;"
+                [class.from-me]="message.user.uid === user.uid"
+                [class.compact]="messages[i - 1]?.user.uid === message.user.uid">
+        <mat-card-header>
+          <img mat-card-avatar [src]="message.user.photoURL">
+          <mat-card-title>{{ message.user.displayName }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="body">{{ message.body }}</div>
+          <div class="time">{{ message.datePosted | date: 'shortTime' }}</div>
+        </mat-card-content>
+      </mat-card>
+  </div>
 </div>
 
 <footer>
@@ -17,7 +20,9 @@
     <mat-form-field [floatLabel]="'never'" appearance="standard">
       <textarea matInput matTextareaAutosize placeholder="Send message..." [(ngModel)]="newMessageBody"
                 (keydown.enter)="send($event)"></textarea>
-      <mat-icon matSuffix color="primary">send</mat-icon>
+      <button mat-icon-button matSuffix color="primary" (click)="send($event)">
+        <mat-icon>send</mat-icon>
+      </button>
     </mat-form-field>
   </mat-card>
 </footer>

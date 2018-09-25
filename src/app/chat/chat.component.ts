@@ -1,29 +1,52 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+import { AfterViewInit, Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { User, UserInfo } from 'firebase/auth';
 import { Observable } from 'rxjs';
-import { first } from 'rxjs/operators';
+import { first, map } from 'rxjs/operators';
 
 import { Message } from './message';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.scss']
+  styleUrls: ['./chat.component.scss'],
+  animations: [
+    trigger('listStagger', [
+      transition('* <=> *', [
+        query(':enter', style({opacity: 0}), {optional: true}),
+        query(
+          ':enter',
+          [
+            stagger(
+              '50ms',
+              animate(
+                '550ms ease-out',
+                style({opacity: 1, transform: 'translateY(0px)'})
+              )
+            )
+          ],
+          {optional: true}
+        )
+      ])
+    ])
+  ]
 })
 export class ChatComponent implements AfterViewInit {
   newMessageBody: string;
   messages$: Observable<Message[]>;
   user?: User;
 
-  @ViewChild('scrollContainer') private scrollContainer: ElementRef<HTMLElement>;
-
   private messageCollection: AngularFirestoreCollection<Message>;
 
   constructor(db: AngularFirestore, private afAuth: AngularFireAuth) {
     this.messageCollection = db.collection<Message>('messages', ref => ref.orderBy('datePosted'));
-    this.messages$ = this.messageCollection.valueChanges();
+    this.messages$ = this.messageCollection.snapshotChanges().pipe(
+      map(actions => actions.map(action => {
+        return {id: action.payload.doc.id, ...action.payload.doc.data()};
+      }))
+    );
 
     this.messages$.subscribe(() => this.scrollToBottom());
 
@@ -35,7 +58,11 @@ export class ChatComponent implements AfterViewInit {
   }
 
   scrollToBottom(): void {
-    setTimeout(() => this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight);
+    setTimeout(() => window.scrollTo(0, document.body.scrollHeight));
+  }
+
+  trackById(index: number, message: Message): string {
+    return message.id;
   }
 
   send(event: KeyboardEvent): void {
