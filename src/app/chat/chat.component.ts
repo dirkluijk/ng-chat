@@ -45,7 +45,8 @@ export class ChatComponent implements AfterViewInit {
     this.messages$ = this.messageCollection.snapshotChanges().pipe(
       map(actions => actions.map(action => {
         return {id: action.payload.doc.id, ...action.payload.doc.data()};
-      }))
+      })),
+      map(messages => messages.slice(-15))
     );
 
     this.messages$.subscribe(() => this.scrollToBottom());
@@ -58,7 +59,7 @@ export class ChatComponent implements AfterViewInit {
   }
 
   scrollToBottom(): void {
-    setTimeout(() => window.scrollTo(0, document.body.scrollHeight));
+    setTimeout(() => window.scroll({ top: document.body.scrollHeight, behavior: 'smooth'}));
   }
 
   trackById(index: number, message: Message): string {
