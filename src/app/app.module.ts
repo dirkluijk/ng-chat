@@ -5,6 +5,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MatButtonModule, MatIconModule, MatMenuModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import 'firebase/auth';
 
 import { environment } from '../environments/environment';
@@ -35,9 +36,10 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

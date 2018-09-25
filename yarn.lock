@@ -90,12 +90,28 @@
     rxjs "^6.0.0"
     source-map "^0.5.6"
 
+"@angular-devkit/core@0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.8.3.tgz#a7158195dc90997de62ec0b12af3325870182c3b"
+  dependencies:
+    ajv "~6.4.0"
+    chokidar "^2.0.3"
+    rxjs "~6.2.0"
+    source-map "^0.5.6"
+
 "@angular-devkit/schematics@0.7.5":
   version "0.7.5"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.7.5.tgz#f46b121f29cb40ad6095285d27a515114a56c5d6"
   dependencies:
     "@angular-devkit/core" "0.7.5"
     rxjs "^6.0.0"
+
+"@angular-devkit/schematics@0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.8.3.tgz#32f2e99b43c39864ec63301963329c9190d7c5d2"
+  dependencies:
+    "@angular-devkit/core" "0.8.3"
+    rxjs "~6.2.0"
 
 "@angular/animations@^6.1.0":
   version "6.1.8"
@@ -191,9 +207,24 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/pwa@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.8.3.tgz#b511f817d2add75bf22b590086a5e0fd998b91aa"
+  dependencies:
+    "@angular-devkit/core" "0.8.3"
+    "@angular-devkit/schematics" "0.8.3"
+    "@schematics/angular" "0.8.3"
+    typescript "~2.6.2"
+
 "@angular/router@^6.1.0":
   version "6.1.8"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-6.1.8.tgz#7106a55392e9f920358544f431dace2ef3715630"
+  dependencies:
+    tslib "^1.9.0"
+
+"@angular/service-worker@^6.1.0":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-6.1.8.tgz#1f8be0db90d28a019cfeaa684ff00bfe739f3dda"
   dependencies:
     tslib "^1.9.0"
 
@@ -400,6 +431,14 @@
   dependencies:
     "@angular-devkit/core" "0.7.5"
     "@angular-devkit/schematics" "0.7.5"
+    typescript ">=2.6.2 <2.10"
+
+"@schematics/angular@0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.8.3.tgz#f4b661c5a196a06c050c0ae56809e6dbcfbf9f98"
+  dependencies:
+    "@angular-devkit/core" "0.8.3"
+    "@angular-devkit/schematics" "0.8.3"
     typescript ">=2.6.2 <2.10"
 
 "@schematics/update@0.7.5":
@@ -5403,6 +5442,12 @@ rxjs@^6.0.0:
   dependencies:
     tslib "^1.9.0"
 
+rxjs@~6.2.0:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.2.2.tgz#eb75fa3c186ff5289907d06483a77884586e1cf9"
+  dependencies:
+    tslib "^1.9.0"
+
 safe-buffer@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
@@ -6284,6 +6329,10 @@ typedarray@^0.0.6:
 "typescript@>=2.6.2 <2.10", typescript@~2.9.1, typescript@~2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
+
+typescript@~2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
 uglify-es@^3.3.4:
   version "3.3.9"
