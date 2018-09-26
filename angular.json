@@ -50,25 +50,6 @@
               "vendorChunk": false,
               "buildOptimizer": true,
               "serviceWorker": true
-            },
-            "pages": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "serviceWorker": true,
-              "baseHref": "https://dirkluijk.github.io/ng-chat/"
             }
           }
         },
@@ -127,7 +108,7 @@
             "tsConfig": "src/tsconfig.server.json",
           },
           "configurations": {
-            "pages": {
+            "production": {
               "optimization": true
             }
           }
@@ -140,9 +121,9 @@
             "route": "shell"
           },
           "configurations": {
-            "pages": {
-              "browserTarget": "ng-chat:build:pages",
-              "serverTarget": "ng-chat:server:pages",
+            "production": {
+              "browserTarget": "ng-chat:build:production",
+              "serverTarget": "ng-chat:server:production",
               "route": "shell"
             }
           }
