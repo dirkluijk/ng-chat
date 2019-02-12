@@ -31,16 +31,15 @@ const routes: Routes = [
     AppComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence(),
+    AngularFirestoreModule,
     AngularFireAuthModule,
-    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
     RouterModule.forRoot(routes)
   ],
   providers: [],

@@ -24,8 +24,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/manifest.json"
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
@@ -48,8 +47,7 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "serviceWorker": true
+              "buildOptimizer": true
             }
           }
         },
@@ -83,8 +81,7 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/manifest.json"
+              "src/assets"
             ]
           }
         },
@@ -98,34 +95,6 @@
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/ng-chat-server",
-            "main": "src/main.server.ts",
-            "tsConfig": "src/tsconfig.server.json",
-          },
-          "configurations": {
-            "production": {
-              "optimization": true
-            }
-          }
-        },
-        "app-shell": {
-          "builder": "@angular-devkit/build-angular:app-shell",
-          "options": {
-            "browserTarget": "ng-chat:build",
-            "serverTarget": "ng-chat:server",
-            "route": "shell"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ng-chat:build:production",
-              "serverTarget": "ng-chat:server:production",
-              "route": "shell"
-            }
           }
         }
       }
