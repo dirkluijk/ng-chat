@@ -2,7 +2,7 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
 import { AfterViewInit, Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { User, UserInfo } from 'firebase/auth';
+import { User, UserInfo } from 'firebase';
 import { Observable } from 'rxjs';
 import { first, map } from 'rxjs/operators';
 

@@ -1,4 +1,4 @@
-import { UserInfo } from 'firebase/auth';
+import { UserInfo } from 'firebase';
 
 export interface Message {
   id?: string;
