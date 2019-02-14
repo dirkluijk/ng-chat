@@ -13,7 +13,8 @@ To make this app fully progressive, it needs to be served over HTTPS. Let's use
 Google Firebase hosting for that!
 
 1. Install the [Firebase CLI](https://firebase.google.com/docs/cli/)
-2. Run `firebase init` in this project. Choose "Hosting", the existing `ng-chat` project, and use the directory `dist/ng-chat`. For the other options, use the defaults.
+2. Run `firebase init` in this project. Choose "Hosting", the existing `ng-chat` project, and use the directory `dist/ng-chat`.
+  Also, choose YES for `Configure as a single-page app`. For the other options, use the defaults.
   Alternatively, you can create your own Firebase project to prevent deployment collisions with others. Please let me know what the Firebase project name is, so that I can adjust the oAuth settings. 
 
 ### Run the app
